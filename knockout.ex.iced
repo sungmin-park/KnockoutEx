@@ -17,3 +17,6 @@ ko.bindingHandlers.backgroundCover =
       $(element)
         .css('background-image', "url(#{value})")
         .css('background-size', 'cover')
+
+ko.isObservableArray = (obj) ->
+  ko.isObservable(obj) and obj.destroyAll?
